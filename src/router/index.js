@@ -18,7 +18,18 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    // Der webpackChunkName-Kommentar ist magisch, da dies den Namen des JS-Chunks definiert, durch den die Website geladen wird.
+    //  In Vue-Devtools unter Network -> JS -> about.js
   },
+  // {
+  //   path: "/*",
+  //   name: "404",
+  //   component: () =>
+  //     import(
+  //       /* webpackChunkName: "errors" */
+  //       "../views/errors/404.vue"
+  //     ),
+  // },
 ];
 
 const router = new VueRouter({

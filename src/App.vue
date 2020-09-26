@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <!-- use the component TheNavigation by using the corresponding tag -->
+    <TheNavigation />
+    <router-view />
+    <!-- use the component TheFooter by using the corresponding tag -->
+    <TheFooter msg="Welcome to Your Vue.js App" />
   </div>
 </template>
+
+<script>
+// @ is an alias to ./src
+import TheNavigation from "@/components/TheNavigation.vue";
+import TheFooter from "@/components/TheFooter.vue";
+export default {
+  components: {
+    TheNavigation,
+    TheFooter,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
