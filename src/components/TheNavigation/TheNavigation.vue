@@ -1,20 +1,17 @@
 <template>
   <div id="nav">
     <ul class="nav-links">
-      <li class="links">
-        <router-link to="/">Home</router-link>
-      </li>
+      <!-- <li :to="{ name: 'Home' }"></li> -->
+      <!-- use all the items from the navItems.json with corresponding links -->
       <li v-for="view in views" :key="view.name" class="links">
-        <router-link :to="view.to">view.tag</router-link>
+        <router-link :to="view.to">{{ view.tag }}</router-link>
       </li>
     </ul>
-    <!-- ursprünglich: -->
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
   </div>
 </template>
 
 <script>
+//import the items for the navbar
 import navItems from "./navItems.json";
 export default {
   name: "TheNavigation",

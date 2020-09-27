@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "Home",
+    "to": {
+      "name": "/"
+    },
+    "icon": "mdi-plus-box"
+  },
+  {
+    "tag": "About",
+    "to": {
+      "name": "About"
+    },
+    "icon": "mdi-checkbox-multiple-blank"
+  }
+]

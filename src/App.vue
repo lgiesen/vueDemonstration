@@ -10,7 +10,7 @@
 
 <script>
 // @ is an alias to ./src
-import TheNavigation from "@/components/TheNavigation.vue";
+import TheNavigation from "@/components/TheNavigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
 export default {
   components: {
