@@ -1,12 +1,5 @@
 [
   {
-    "tag": "Home",
-    "to": {
-      "name": "/"
-    },
-    "icon": "mdi-plus-box"
-  },
-  {
     "tag": "About",
     "to": {
       "name": "About"
