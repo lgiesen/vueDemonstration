@@ -21,15 +21,15 @@ const routes = [
     // Der webpackChunkName-Kommentar ist magisch, da dies den Namen des JS-Chunks definiert, durch den die Website geladen wird.
     //  In Vue-Devtools unter Network -> JS -> about.js
   },
-  // {
-  //   path: "/*",
-  //   name: "404",
-  //   component: () =>
-  //     import(
-  //       /* webpackChunkName: "errors" */
-  //       "../views/errors/404.vue"
-  //     ),
-  // },
+  {
+    path: "/*",
+    name: "404",
+    component: () =>
+      import(
+        /* webpackChunkName: "errors" */
+        "../views/errors/404.vue"
+      ),
+  },
 ];
 
 export default new VueRouter({
