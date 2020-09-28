@@ -31,6 +31,7 @@ ul {
   * {
     display: inline;
     margin: 1rem;
+    text-decoration: none;
   }
 }
 </style>

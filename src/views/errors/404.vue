@@ -6,26 +6,23 @@
       v-col(align="center")
         h1.display-3.warning--text.font-weight-bold
           | 404 - Page not found
-        h2.mt-4 You got lost! This page does not exist. 
-  v-parallax(dark 
-    src="@/assets/images/404.jpg"
-    height="800")
+        h2.mt-4 You got lost! This page does not exist.
+  v-parallax(dark, src="@/assets/images/404.jpg", height="800")
     v-container(fluid)
-      v-row(justify="start" align="center")
+      v-row(justify="start", align="center")
         v-col
           p.text-justify.headline.font-weight-bold
-            | {{$t("404message")}}
-      v-row(justify="start" align="center")
+            | {{ $t('404message') }}
+      v-row(justify="start", align="center")
         v-col(align="center")
-          v-btn(color="warning" 
-            :to="{name:'home'}") 
-            | {{$t("goHome")}}
+          v-btn(color="warning", :to="{ name: 'home' }") 
+            | {{ $t('goHome') }}
 </template>
 
 <script>
 /* eslint-disable max-len */
 export default {
-  name: "NotFound"
+  name: "NotFound",
 };
 </script>
 
