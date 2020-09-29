@@ -9,14 +9,22 @@
 </template>
 
 <script>
+// importing the navigation and the footer
 // @ is an alias to ./src
 import TheNavigation from "@/components/TheNavigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
+
+// mapState, mapGetters are a helpers to facilitate the creation of computed properties 
+import { mapState } from 'vuex';
+
 export default {
   components: {
     TheNavigation,
     TheFooter,
   },
+  computed: mapState({
+      num: state => state.no,
+    })
 };
 </script>
 
