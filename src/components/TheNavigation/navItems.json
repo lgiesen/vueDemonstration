@@ -5,5 +5,12 @@
       "name": "About"
     },
     "icon": "mdi-checkbox-multiple-blank"
+  },
+  {
+    "tag": "State Management",
+    "to": {
+      "name": "State_Management"
+    },
+    "icon": "mdi-checkbox-multiple-blank"
   }
 ]
