@@ -20,7 +20,7 @@ export default {
   components: {
     TheNavigation,
     TheFooter,
-  }
+  },
 };
 </script>
 
