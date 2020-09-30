@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$primary: #6238b4;
+
 ul {
   list-style-type: none;
   * {
@@ -42,7 +44,7 @@ ul {
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $primary;
     }
   }
 }
