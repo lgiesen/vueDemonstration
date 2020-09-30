@@ -3,18 +3,17 @@
     v-container(fluid)
       v-row
         v-col(cols=3)
-          p.display-1.font-weight-bold Lorem ipsum 
+          p Lorem ipsum 
         v-col(cols=3)
-          p.display-1.font-weight-bold Lorem ipsum 
+          p Lorem ipsum 
         v-col(cols=3)
-          p.display-1.font-weight-bold Lorem ipsum 
+          p Lorem ipsum 
         v-col(cols=3)
-          p.display-1.font-weight-bold Lorem ipsum
+          p Lorem ipsum
       v-divider
 
-      v-row(align="center")
-        v-col(align="start")
-        v-col(align="end")
+      v-row
+        p
           | &copy; {{new Date().getFullYear()}} - Leo Giesen
 </template>
 
@@ -23,6 +22,8 @@ export default {
   name: "TheFooter"
 };
 </script>
+<style lang="scss" scoped>
+</style>
 
 // <i18n>
 // {

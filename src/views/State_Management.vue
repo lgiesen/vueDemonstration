@@ -1,25 +1,32 @@
 <template lang="pug">
   v-container
     v-row
-      v-col(align="center")
-        h1.display-3.warning--text.font-weight-bold 
+      v-col(align="center" outlined)
+        h1
           | Vuex - State Management
-    v-row
-      //- v-pre disables vues interpretation of code (here: curly brackets) for that block
-      p(v-pre) In store.js: state: {no: 11}. 
-        | This is referenced in State_Management.vue (this view)
-        | within
-        br
-        | computed: {
-        br
-        |  num () {
-        |   return this.$store.state.no
-        |  },
-        br
-        | }
-        br
-        | This num can be referenced in the html template of the view
-        | with double curly brackets: {{ num }}
+    v-row(cols="12" justify="space-between" align="center")
+      //- v-spacer
+      v-col(cols="5")
+        //- v-pre disables vues interpretation of code (here: curly brackets) for that block
+        v-card.box(outlined) 
+          v-pre In store.js: state: {no: 11}. 
+            | This is referenced in State_Management.vue (this view)
+            | within
+            br
+            | computed: {
+            br
+            |   return this.$store.state.no
+            |  num () {
+            |  },
+            br
+            | }
+            br
+            | This num can be referenced in the html template of the view
+            | with double curly brackets: {{ num }}
+      //- v-spacer
+      v-col(cols="5")
+        v-card.box(outlined) asdf
+      //- v-spacer
 </template>
 
 <script>
@@ -34,4 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.box{
+  height: 40vh;
+}
 </style>
