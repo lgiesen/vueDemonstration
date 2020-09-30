@@ -1,20 +1,21 @@
 <template lang="pug">
   v-footer(padless)
     v-container(fluid)
-      v-row
-        v-col(cols=3)
-          p Lorem ipsum 
-        v-col(cols=3)
-          p Lorem ipsum 
-        v-col(cols=3)
-          p Lorem ipsum 
-        v-col(cols=3)
-          p Lorem ipsum
+      v-container
+        v-row
+          v-col(cols=3)
+            p Lorem ipsum 
+          v-col(cols=3)
+            p Lorem ipsum 
+          v-col(cols=3)
+            p Lorem ipsum 
+          v-col(cols=3)
+            p Lorem ipsum
       v-divider
-
-      v-row
-        p
-          | &copy; {{new Date().getFullYear()}} - Leo Giesen
+      v-container
+        v-row
+          p
+            | &copy; {{new Date().getFullYear()}} - Leo Giesen
 </template>
 
 <script>

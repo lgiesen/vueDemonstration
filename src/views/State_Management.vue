@@ -15,16 +15,16 @@
               br
               | computed: {
               br
-              |  num () { return this.$store.state.no },
+              |  viewComputed () { return this.$store.state.storeVariable },
               br
               | }
               br
-              | This num can be referenced in the html template of the view
-              | with double curly brackets: {{viewNum}}
-              //- span(v-pre) {{ viewNum }}
+              | viewComputed can be referenced in the html template of the view
+              | with double curly brackets: {{viewComputed}}
+              //- span(v-pre) {{ viewComputed }}
         v-spacer
         v-col(cols="5")
-          v-card.box(outlined) asdf
+          v-card.box(outlined) Lorem ipsum
         v-spacer
       v-row
 </template>
@@ -36,12 +36,12 @@ export default {
   name: "State_Management",
   // Option 1: normal
   // computed: {
-  //   num () {
-  //     return this.$store.state.no
+  //   viewComputed () {
+  //     return this.$store.state.storeVariable
   //   },
 
   // Option 2: using mapState
-  computed: mapState({viewNum: state => state.storeNum})
+  computed: mapState({viewComputed: state => state.storeVariable})
 };
 </script>
 
