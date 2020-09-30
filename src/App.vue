@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <!-- use the component TheNavigation by using the corresponding tag -->
-    <TheNavigation />
-    <router-view />
-    <!-- use the component TheFooter by using the corresponding tag -->
-    <TheFooter msg="Welcome to Your Vue.js App" />
+    <v-app>
+      <!-- use the component TheNavigation by using the corresponding tag -->
+      <TheNavigation />
+      <router-view />
+      <!-- use the component TheFooter by using the corresponding tag -->
+      <TheFooter msg="Welcome to Your Vue.js App" />
+    </v-app>
   </div>
 </template>
 
