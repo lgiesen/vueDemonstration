@@ -1,13 +1,11 @@
-<template>
-  <div id="app">
-    <v-app>
-      <!-- use the component TheNavigation by using the corresponding tag -->
-      <TheNavigation />
-      <router-view />
-      <!-- use the component TheFooter by using the corresponding tag -->
-      <TheFooter msg="Welcome to Your Vue.js App" />
-    </v-app>
-  </div>
+<template lang="pug">
+  v-app#app
+    <!-- use the component TheNavigation by using the corresponding tag -->
+    TheNavigation
+    GoBack
+    router-view
+    <!-- use the component TheFooter by using the corresponding tag -->
+    TheFooter
 </template>
 
 <script>
@@ -15,11 +13,13 @@
 // @ is an alias to ./src
 import TheNavigation from "@/components/TheNavigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import GoBack from "@/components/GoBack";
 
 export default {
   components: {
     TheNavigation,
     TheFooter,
+    GoBack
   },
 };
 </script>
