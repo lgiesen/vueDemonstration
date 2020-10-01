@@ -22,6 +22,12 @@ const routes = [
     //  In Vue-Devtools unter Network -> JS -> about.js
   },
   {
+    path: "/basics",
+    name: "Basics",
+    component: () =>
+      import(/* webpackChunkName: "basics" */ "./views/Basics.vue"),
+  },
+  {
     path: "/state-management",
     name: "State_Management",
     component: () =>

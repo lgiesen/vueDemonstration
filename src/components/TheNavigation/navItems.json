@@ -7,6 +7,13 @@
     "icon": "mdi-checkbox-multiple-blank"
   },
   {
+    "tag": "Basics",
+    "to": {
+      "name": "Basics"
+    },
+    "icon": "mdi-checkbox-multiple-blank"
+  },
+  {
     "tag": "State Management",
     "to": {
       "name": "State_Management"

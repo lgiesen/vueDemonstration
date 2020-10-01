@@ -20,8 +20,8 @@
               | }
               br
               | viewComputed can be referenced in the html template of the view
-              | with double curly brackets: {{viewComputed}}
-              //- span(v-pre) {{ viewComputed }}
+              | with double curly brackets: 
+              span(v-pre) {{ viewComputed }}
         v-spacer
         v-col(cols="5")
           v-card.box(outlined) Lorem ipsum
@@ -31,7 +31,8 @@
 
 <script>
 // importing mapState-Helper for facilitating computed property creation
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
+
 export default {
   name: "State_Management",
   // Option 1: normal
@@ -41,12 +42,14 @@ export default {
   //   },
 
   // Option 2: using mapState
-  computed: mapState({viewComputed: state => state.storeVariable})
+  computed: mapState({
+    viewComputed: (state) => state.storeVariable,
+  }),
 };
 </script>
 
 <style lang="scss" scoped>
-.box{
+.box {
   height: 40vh;
   padding: 0.75em 1em;
 }
