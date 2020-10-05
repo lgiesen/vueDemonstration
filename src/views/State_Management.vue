@@ -25,26 +25,42 @@
         v-spacer
         v-col(cols="5")
           v-card.box(outlined) Lorem ipsum
+            p storeVariable: {{ storeVariable }}
+            p getRequestCount: {{getRequestCount}} 
+            p getValidRequests: {{getValidRequests}}
+            v-text-field(v-model.number="id")
+            p getRequestById: {{getRequestById(id)}}
         v-spacer
       v-row
 </template>
 
 <script>
-// importing mapState-Helper for facilitating computed property creation
-import { mapState } from "vuex";
+// importing map-Helpers for facilitating computed property creation
+// import { mapState, mapMutations, mapGetters } from 'vuex';
+// import { mapState } from 'vuex';
+import { mapGetters } from 'vuex';
+// import { mapMutations } from 'vuex';
+// import { mapActions } from 'vuex';
 
 export default {
   name: "State_Management",
+  data: () => ({
+    id: 2,
+  }),
   // Option 1: normal
   // computed: {
   //   viewComputed () {
   //     return this.$store.state.storeVariable
   //   },
-
-  // Option 2: using mapState
-  computed: mapState({
-    viewComputed: (state) => state.storeVariable,
-  }),
+  // Option 2: using mapState -- ggf. falsch
+  // computed: mapState({
+  //   viewComputed: (state) => state.storeVariable,
+  // }),
+  computed: 
+    // mapState(['storeVariable']), // does not go together with mapGetters
+    mapGetters([
+        'getRequestCount', 'getValidRequests', 'getRequestById'
+    ]),
 };
 </script>
 

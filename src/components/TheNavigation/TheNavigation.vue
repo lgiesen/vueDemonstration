@@ -1,15 +1,11 @@
-<template>
-  <div id="nav">
-    <ul class="nav-links">
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
+<template lang="pug">
+  div#nav
+    ul.nav-links
+      li
+        router-link(to="/") Home
       <!-- use all the items from the navItems.json with corresponding links -->
-      <li v-for="view in views" :key="view.name" class="links">
-        <router-link :to="view.to">{{ view.tag }}</router-link>
-      </li>
-    </ul>
-  </div>
+      li(v-for="view in views" :key="view.name").links
+        router-link(:to="view.to") {{ view.tag }}
 </template>
 
 <script>
