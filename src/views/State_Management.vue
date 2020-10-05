@@ -1,15 +1,16 @@
 <template lang="pug">
     v-container
       v-row
-        v-col(align="center" outlined)
+        v-col(align="center")
           h1
             | Vuex - State Management
       v-row(cols="12")
         v-spacer
-        v-col(cols="5")
+        v-col(cols="6")
           //- v-pre disables vues interpretation of code (here: curly brackets) for that block
-          v-card.box(outlined) 
-            p In store.js: state: {no: 11}. 
+          v-card.box 
+            v-card-title Referencing Vuex Store
+            v-card-text In store.js: state: {no: 11}. 
               | This is referenced in State_Management.vue (this view)
               | within
               br
@@ -23,21 +24,31 @@
               | with double curly brackets: 
               span(v-pre) {{ viewComputed }}
         v-spacer
-        v-col(cols="5")
-          v-card.box(outlined) Lorem ipsum
-            p storeVariable: {{ storeVariable }}
-            p getRequestCount: {{getRequestCount}} 
-            p getValidRequests: {{getValidRequests}}
-            v-text-field(v-model.number="id")
-            p getRequestById: {{getRequestById(id)}}
+        v-col(cols="6")
+          v-card.box
+            v-card-title mapGetters
+            v-card-text
+              p getRequestCount: {{getRequestCount}} 
+              p getValidRequests: {{getValidRequests}}
+              v-text-field(v-model.number="id")
+              p getRequestById: {{getRequestById(id)}}
         v-spacer
       v-row
+        v-spacer
+        v-col(cols=6)
+          v-card.box 
+            p storeVariable: {{ storeVariable }}
+            v-btn(@click="incrementVarDelay") delayed increment
+        v-spacer
+        v-col(cols=6)
+          v-card.box
+        v-spacer
 </template>
 
 <script>
 // importing map-Helpers for facilitating computed property creation
-// import { mapState, mapMutations, mapGetters } from 'vuex';
-// import { mapState } from 'vuex';
+// import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapState } from 'vuex';
 import { mapGetters } from 'vuex';
 // import { mapMutations } from 'vuex';
 // import { mapActions } from 'vuex';
@@ -45,7 +56,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: "State_Management",
   data: () => ({
-    id: 2,
+    id: 123,
   }),
   // Option 1: normal
   // computed: {
@@ -56,11 +67,16 @@ export default {
   // computed: mapState({
   //   viewComputed: (state) => state.storeVariable,
   // }),
-  computed: 
-    // mapState(['storeVariable']), // does not go together with mapGetters
-    mapGetters([
+  computed: {
+    ...mapState(['storeVariable']), // does not go together with mapGetters
+    ...mapGetters([
         'getRequestCount', 'getValidRequests', 'getRequestById'
-    ]),
+    ]),},
+  methods: {
+    incrementVarDelay(){
+      this.$store.dispatch('incrementVarDelayed')
+    }
+  }
 };
 </script>
 

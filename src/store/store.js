@@ -5,19 +5,34 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    storeVariable: 11,
+    storeVariable: 123,
     id: 1,
     requests: [
-      {id: 0, valid: true, name: "lorem ipsum"},
-      {id: 2, valid: true, name: "dolor sit amet"},
-      {id: 8, valid: false, name: "ex ludus integre qui"},
+      {id: 123, valid: true, priorityLevel: 20},
+      {id: 234, valid: true, priorityLevel: 1},
+      {id: 345, valid: false, priorityLevel: 7},
     ]
   },
   mutations: {
-
+    incVar(store){
+      store.storeVariable++
+    },
   },
   actions: {
+    incrementVar(context){
+      context.commit('incVar')
+    },
+    incrementVarDelayed({ commit }) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          commit('incVar')
+          resolve()
+        }, 500)
+      })
+    },
+    chainedFunc(){
 
+    }
   },
   getters: {
     getRequestCount: state => {
