@@ -6,7 +6,6 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     storeVariable: 123,
-    id: 1,
     requests: [
       {id: 123, valid: true, priorityLevel: 20},
       {id: 234, valid: true, priorityLevel: 1},
@@ -29,9 +28,6 @@ export default new Vuex.Store({
           resolve()
         }, 500)
       })
-    },
-    chainedFunc(){
-
     }
   },
   getters: {

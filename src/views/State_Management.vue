@@ -38,7 +38,8 @@
         v-col(cols=6)
           v-card.box 
             p storeVariable: {{ storeVariable }}
-            v-btn(@click="incrementVarDelay") delayed increment
+            v-btn(@click="incrementVarDelayed") delayed increment
+            v-btn(@click="incVar") direct increment
         v-spacer
         v-col(cols=6)
           v-card.box
@@ -47,9 +48,9 @@
 
 <script>
 // importing map-Helpers for facilitating computed property creation
-// import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
-import { mapState } from 'vuex';
-import { mapGetters } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+// import { mapState } from 'vuex';
+// import { mapGetters } from 'vuex';
 // import { mapMutations } from 'vuex';
 // import { mapActions } from 'vuex';
 
@@ -73,9 +74,15 @@ export default {
         'getRequestCount', 'getValidRequests', 'getRequestById'
     ]),},
   methods: {
-    incrementVarDelay(){
-      this.$store.dispatch('incrementVarDelayed')
-    }
+    incVar(){
+      this.$store.dispatch('incVar')
+    },
+    // Option 1:
+    // incrementVarDelayed(){
+    //   this.$store.dispatch('incrementVarDelayed')
+    // },
+    ...mapMutations(['incVar']),
+    ...mapActions(['incrementVarDelayed'])
   }
 };
 </script>
