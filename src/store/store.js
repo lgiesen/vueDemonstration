@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    storeVariable: 123,
+    clickAmount: 123,
     requests: [
       {id: 123, valid: true, priorityLevel: 20},
       {id: 234, valid: true, priorityLevel: 1},
@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   mutations: {
     incVar(store){
-      store.storeVariable++
+      store.clickAmount++
     },
   },
   actions: {

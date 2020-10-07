@@ -16,7 +16,7 @@
               br
               | computed: {
               br
-              |  viewComputed () { return this.$store.state.storeVariable },
+              |  viewComputed () { return this.$store.state.clickAmount },
               br
               | }
               br
@@ -37,7 +37,7 @@
         v-spacer
         v-col(cols=6)
           v-card.box 
-            p storeVariable: {{ storeVariable }}
+            p clickAmount: {{ clickAmount }}
             v-btn(@click="incrementVarDelayed") delayed increment
             v-btn(@click="incVar") direct increment
         v-spacer
@@ -62,14 +62,14 @@ export default {
   // Option 1: normal
   // computed: {
   //   viewComputed () {
-  //     return this.$store.state.storeVariable
+  //     return this.$store.state.clickAmount
   //   },
   // Option 2: using mapState -- ggf. falsch
   // computed: mapState({
-  //   viewComputed: (state) => state.storeVariable,
+  //   viewComputed: (state) => state.clickAmount,
   // }),
   computed: {
-    ...mapState(['storeVariable']), // does not go together with mapGetters
+    ...mapState(['clickAmount']), // does not go together with mapGetters
     ...mapGetters([
         'getRequestCount', 'getValidRequests', 'getRequestById'
     ]),},
