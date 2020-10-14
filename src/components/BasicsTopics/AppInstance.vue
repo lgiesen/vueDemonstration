@@ -1,7 +1,7 @@
 <template lang="pug">
     v-card
         v-card-title
-            h2 Application Instnace
+            h2 Application Instance
         v-card-text
             p 
 </template>

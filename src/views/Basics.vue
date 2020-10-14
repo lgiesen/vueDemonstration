@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 BasicsTopics * {
   margin: 1em;
-  width: 70vh;
+  width: 75vh;
   height: 45vh;
 }
 </style>
