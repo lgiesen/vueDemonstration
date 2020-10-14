@@ -7,7 +7,7 @@
                 | DOM-data, which conveys that calling a variable in DOM is 
                 | reactive. This automatic update of a variable is achieved 
                 | with moustache syntax, which also allows JS logic: 
-            vue-code-highlight {{{ variableName >= 0 ? ‘positive’ : ‘negative’}}}
+            vue-code-highlight &lbrace;&lbrace; variableName >= 0 ? ‘positive’ : ‘negative’&rbrace;&rbrace;
 </template>
 
 <script>
