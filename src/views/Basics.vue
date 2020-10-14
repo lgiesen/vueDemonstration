@@ -6,42 +6,38 @@ v-container.basics
     TemplateSyntax
     ComputedProperties
     ClassStyleBinding
+    ConditionalRendering
     ListRendering
     EventHandling
+    UserInput
     ComponentSystem
-    ConditionalRendering
-  v-row
-    v-col 
-      v-card
-        v-card-title
-          h2 Preview of State Management
-        v-card-text
-          p 
-    v-col
+    PreviewStateManagement
 </template>
 <script>
-import ClassStyleBinding from "@/components/BasicsTopics/ClassStyleBinding.vue";
-import UserInput from "@/components/BasicsTopics/UserInput.vue";
-import ListRendering from "@/components/BasicsTopics/ListRendering.vue";
-import ComputedProperties from "@/components/BasicsTopics/ComputedProperties.vue";
-import EventHandling from "@/components/BasicsTopics/EventHandling.vue";
-import TemplateSyntax from "@/components/BasicsTopics/TemplateSyntax.vue";
 import AppInstance from "@/components/BasicsTopics/AppInstance.vue";
+import TemplateSyntax from "@/components/BasicsTopics/TemplateSyntax.vue";
+import ComputedProperties from "@/components/BasicsTopics/ComputedProperties.vue";
+import ClassStyleBinding from "@/components/BasicsTopics/ClassStyleBinding.vue";
 import ConditionalRendering from "@/components/BasicsTopics/ConditionalRendering.vue";
+import ListRendering from "@/components/BasicsTopics/ListRendering.vue";
+import EventHandling from "@/components/BasicsTopics/EventHandling.vue";
+import UserInput from "@/components/BasicsTopics/UserInput.vue";
 import ComponentSystem from "@/components/BasicsTopics/ComponentSystem.vue";
+import PreviewStateManagement from "@/components/BasicsTopics/PreviewStateManagement.vue";
 
 export default {
   name: "Basics",
   components: {
     AppInstance,
     TemplateSyntax,
-    EventHandling,
-    ListRendering,
     ComputedProperties,
     ClassStyleBinding,
-    UserInput,
     ConditionalRendering,
-    ComponentSystem
+    ListRendering,
+    EventHandling,
+    UserInput,
+    ComponentSystem,
+    PreviewStateManagement
   },
 };
 </script>
@@ -49,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 BasicsTopics * {
   margin: 1em;
-  width: 75vh;
+  width: 55vh;
   height: 45vh;
 }
 </style>
