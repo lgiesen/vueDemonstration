@@ -4,19 +4,21 @@
             h2 Template Syntax
         v-card-text
             p The HTML template syntax affords declarative rendering of 
-                | DOM-data, which conveys that calling a variable in DOM is 
-                | reactive. This automatic update of a variable is achieved 
-                | with moustache syntax, which also allows JS logic: 
-            //- vue-code-highlight {{ variableName >= 0 ? ‘positive’ : ‘negative’}}
+              | DOM-data, which conveys that calling a variable in DOM is 
+              | reactive. This automatic update of a variable is achieved 
+              | with moustache syntax, which also allows JS logic: 
+              codeExample
 </template>
 
 <script>
-import { component as VueCodeHighlight } from 'vue-code-highlight';
+import codeExample from "@/components/displayCode/code.vue";
 export default {
   name: "TemplateSyntax",
   components:{
-    VueCodeHighlight,
-  }
+    codeExample
+  },
+  data: () => ({
+  })
 };
 </script>
 <style lang="scss" scoped>
