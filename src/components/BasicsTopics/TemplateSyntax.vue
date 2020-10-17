@@ -7,19 +7,23 @@
               | DOM-data, which conveys that calling a variable in DOM is 
               | reactive. This automatic update of a variable is achieved 
               | with moustache syntax, which also allows JS logic: 
-              codeExample
+            MarkdownCode(:markdown="exampleCode")
+            pre
+              code {{exampleCode}}
 </template>
 
 <script>
-import codeExample from "@/components/displayCode/code.vue";
+import MarkdownCode from "@/components/MarkdownCode.vue";
+
 export default {
   name: "TemplateSyntax",
   components:{
-    codeExample
+    MarkdownCode
   },
   data: () => ({
-  })
+    exampleCode: "let x = 3; function() { return test; }"
+  }),
+  computed: {
+  }
 };
 </script>
-<style lang="scss" scoped>
-</style>
