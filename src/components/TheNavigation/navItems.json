@@ -19,5 +19,12 @@
       "name": "State_Management"
     },
     "icon": "mdi-checkbox-multiple-blank"
+  },
+  {
+    "tag": "Design Systems",
+    "to": {
+      "name": "Design_Systems"
+    },
+    "icon": "mdi-checkbox-multiple-blank"
   }
 ]

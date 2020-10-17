@@ -34,6 +34,12 @@ const routes = [
       import(/* webpackChunkName: "state-management" */ "./views/State_Management.vue"),
   },
   {
+    path: "/design-systems",
+    name: "Design_Systems",
+    component: () =>
+      import(/* webpackChunkName: "design-systems" */ "./views/DesignSystems.vue"),
+  },
+  {
     path: "/*",
     name: "404",
     component: () =>

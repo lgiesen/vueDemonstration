@@ -4,13 +4,13 @@
       v-container
         v-row
           v-col(cols=3)
-            p Lorem ipsum 
+            p Impressum 
           v-col(cols=3)
-            p Lorem ipsum 
+            p Privacy Policy 
           v-col(cols=3)
-            p Lorem ipsum 
+            p Contact
           v-col(cols=3)
-            p Lorem ipsum
+            p Terms of Use
       v-divider
       v-container
         v-row
