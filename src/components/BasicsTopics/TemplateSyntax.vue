@@ -8,8 +8,9 @@
               | reactive. This automatic update of a variable is achieved 
               | with moustache syntax, which also allows JS logic: 
             MarkdownCode(:markdown="exampleCode")
+            highlightjs(language="javascript" :code="exampleCode")
             pre
-              code {{exampleCode}}
+              code.javascript {{exampleCode}}
 </template>
 
 <script>
