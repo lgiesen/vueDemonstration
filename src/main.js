@@ -4,6 +4,7 @@ import vuetify from "./plugins/vuetify";
 import i18n from "./i18n";
 import router from "./router.js";
 import store from "./store/store.js";
+import hljs from 'highlight.js';
 Vue.use(hljs.vuePlugin);
 Vue.config.productionTip = false;
 
