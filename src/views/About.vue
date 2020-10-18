@@ -3,11 +3,14 @@
     v-container.text-center
       h1 Why Vue.js?
       img(alt="Vue logo" src="../assets/logo.png")
-      
 </template>
 <script>
 export default {
-  name: "About"
+  name: "About",
+  data: () => ({
+  }),
+  computed: {
+  }
 };
 </script>
 <style lang="scss" scoped>
