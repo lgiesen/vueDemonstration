@@ -11,6 +11,7 @@
             ForPresentation
           v-tab-item(key="Seminar Thesis")  
             SeminarThesis
+      div.block
 </template>
 
 <script>

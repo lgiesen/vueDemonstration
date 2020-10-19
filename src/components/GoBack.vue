@@ -1,7 +1,7 @@
-<template>
-  <span class="go-back">
-    <button @click="goBack">&larr; Go Back</button>
-  </span>
+<template lang="pug">
+  span.go-back.ml-10
+    v-btn(@click="goBack" outlined icon color="primary") 
+      v-icon(size="24px") mdi-arrow-left
 </template>
 <script>
 export default {
