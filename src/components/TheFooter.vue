@@ -1,48 +1,31 @@
 <template lang="pug">
   v-footer(padless)
-    v-container(fluid)
-      v-container
-        v-row
-          v-col(cols=3)
-            p Impressum 
-          v-col(cols=3)
-            p Privacy Policy 
-          v-col(cols=3)
-            p Contact
-          v-col(cols=3)
-            p Terms of Use
-      v-divider
-      v-container
-        v-row
-          p
-            | &copy; {{new Date().getFullYear()}} - Leo Giesen
+    v-row(justify="center"
+      no-gutters)
+      v-btn.my-2(
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded)
+      v-col.primary.lighten-2.py-4.text-center.white--text(
+        cols=12)
+        p &copy; {{new Date().getFullYear()}} - Leo Giesen
 </template>
 
 <script>
 export default {
-  name: "TheFooter"
+  name: "TheFooter",
+  data: () => ({
+    links: [
+      'Contact',
+      'Impressum',
+      'Privacy Policy',
+      'Terms of Use'
+    ]
+  })
 };
 </script>
 <style lang="scss" scoped>
 </style>
 
-// <i18n>
-// {
-//   "en": {
-//     "home": "Home", 
-//     "about": "About", 
-//     "contact": "Contact", 
-//     "imprint": "Imprint",
-//     "privacy": "Privacy",
-//     "terms": "Terms"
-//   }, 
-//   "de": {
-//     "home": "Start", 
-//     "about": "Über Uns", 
-//     "contact": "Kontakt", 
-//     "imprint": "Impressum",
-//     "privacy": "Privatsphäre",
-//     "terms": "Allg. Geschäftsbedingungen"
-//   }
-// }
-// </i18n>
