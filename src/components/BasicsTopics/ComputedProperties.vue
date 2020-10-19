@@ -1,7 +1,7 @@
 <template lang="pug">
     v-card
         v-card-title
-            h2 Computed Properties and Watchers
+            h2 Computed Properties
         v-card-text
             p 
 </template>

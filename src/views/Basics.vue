@@ -46,6 +46,6 @@ export default {
 BasicsTopics * {
   margin: 1em;
   width: 55vh;
-  height: 45vh;
+  min-height: 45vh;
 }
 </style>
