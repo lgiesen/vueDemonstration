@@ -7,7 +7,7 @@
             highlightjs(language="javascript" :code="app")
             v-btn(rounded href="https://github.com/lgiesen/vueDemonstration/blob/master/src/App.vue") 
                 v-icon mdi-link
-                |  view complete code
+                |  view complete App.vue file
 </template>
 
 <script>

@@ -16,7 +16,7 @@ export default {
   name: "EventHandling",
   data: () => ({
       von: `btn(v-on:click=”func(), counter += 1”) {{ counter }}`,
-      prevent: `form(@submit.prevent=” addToCart (item)”)`
+      prevent: `form(@submit.prevent=”addToCart(item)”)`
   })
 };
 </script>
