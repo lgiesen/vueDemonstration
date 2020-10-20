@@ -1,7 +1,7 @@
 <template lang="pug">
-  div.about
+  div
     v-container
-      h1.text-center References
+      h1.text-center Router //- References
       img(alt="Vue logo" src="../assets/logo.png")
       p Presentations today to put the puzzle pieces together:
       h2 Monolithic or Microsoervice Architecture
@@ -30,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: "About",
+  name: "Routing",
   data: () => ({
   }),
   computed: {

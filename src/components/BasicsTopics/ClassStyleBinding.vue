@@ -3,11 +3,10 @@
     v-card-title
       h2 Class and Style Binding
     v-card-text
-      div.text-xs-center
-        v-btn(
-          :class="[isActive ? 'active' : 'disabled']",
-          @click="toggleClass"
-        ) Toggle my Class to change my color
+      v-btn.mb-4.mt-4(
+        :class="[isActive ? 'active' : 'disabled']",
+        @click="toggleClass"
+      ) Toggle my Class to change my color
       p Special reactive actions to modify the DOM are enabled by directives, which use a 
         | ‘v-‘-prefix. By appending a colon, you can pass an argument. For instance, 
         code.hljs.d-inline v-bind
