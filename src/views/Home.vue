@@ -1,17 +1,16 @@
 <template lang="pug">
-  div.home
-    v-container
-      h1.text-center.display-2.font-weight-bold.mb-10 Dissociation of Front-End Frameworks
-      v-card
-        v-tabs(v-model="tab") 
-          v-tab(v-for="item in items"
-            :key="item.tab") {{ item.tab }}
-        v-tabs-items(v-model="tab")
-          v-tab-item(key="Presentation")
-            ForPresentation
-          v-tab-item(key="Seminar Thesis")  
-            SeminarThesis
-      div.block
+  v-container
+    h1.text-center.display-2.font-weight-bold.mb-10 Dissociation of Front-End Frameworks
+    v-card
+      v-tabs(v-model="tab") 
+        v-tab(v-for="item in items"
+          :key="item.tab") {{ item.tab }}
+      v-tabs-items(v-model="tab")
+        v-tab-item(key="Presentation")
+          ForPresentation
+        v-tab-item(key="Seminar Thesis")  
+          SeminarThesis
+    div.block
 </template>
 
 <script>
@@ -41,6 +40,6 @@ export default {
 <style lang="scss" scoped>
   .block{
     width: 100vw;
-    height: 10rem;
+    height: 5rem;
   }
 </style>

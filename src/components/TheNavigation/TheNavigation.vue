@@ -1,11 +1,17 @@
 <template lang="pug">
-  div#nav
-    ul.nav-links
-      li
-        router-link(to="/") Home
-      <!-- use all the items from the navItems.json with corresponding links -->
-      li(v-for="view in views" :key="view.name").links
-        router-link(:to="view.to") {{ view.tag }}
+  card#nav
+    v-app-bar(absolute dense)
+      //- props can be used to customize the v-img properties
+      template(v-slot:img="{ props }")
+        v-img(v-bind="props"
+          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)")
+      template(v-slot:extension)
+        v-tabs(align-with-title)
+          v-tab(to="/") Home
+          <!-- use all the items from the navItems.json with corresponding links -->
+          v-tab(v-for="view in views" 
+            :key="view.name" 
+            :to="view.to").links {{ view.tag }}
 </template>
 
 <script>
@@ -23,18 +29,10 @@ export default {
 
 <style scoped lang="scss">
 $primary: #6238b4;
-
-ul {
-  list-style-type: none;
-  * {
-    display: inline;
-    margin: 1rem;
-    text-decoration: none;
-  }
-}
 #nav {
   padding: 30px;
   text-align: center;
+  width: 100vw;
   a {
     font-weight: bold;
     color: #2c3e50;

@@ -79,8 +79,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  .block{
-    width: 100vw;
-    height: 10rem;
-  }
 </style>
