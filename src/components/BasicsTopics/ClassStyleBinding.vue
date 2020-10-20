@@ -11,8 +11,7 @@
         v-pre You can pass arguments to the v-bind directive so that
           | you can add classes based on boolean expressions.
           | The code used for the button is:
-          | v-btn(:class="{active: isActive, disabled:
-          | !isActive}" @click="toggleClass") Toggle my class
+          highlightjs(language="javascript" :code="toggleClassText") Toggle my Class
           | active and disabled are classes, which are applied based on the data isActive
           | By pressing the button, you toggle the value of isActive
           | and therefore add disabled and remove active or the other way around.
@@ -21,11 +20,12 @@
           | Luckily, there are more beautiful ways of implementation:
           br 
           | First one is:
-          | :class="[isActive ? 'active' : 'disabled']
+          highlightjs(language="javascript" :code="option1") 
           br
           | Second one is:
-          | :class="checkIfActive" in combination with the computed property:
-          | checkIfActive(){ return this.isActive ? "active" : "disabled"; }
+          highlightjs(language="javascript" :code="option2") 
+          | in combination with the computed property:
+          highlightjs(language="javascript" :code="option2computed") 
 </template>
 
 <script>
@@ -33,7 +33,13 @@ export default {
   name: "ClassStyleBinding",
   data: () => ({
     isActive: true,
-    // name: "Default Name",
+    toggleClassText: 
+  `v-btn(
+    :class="[isActive ? 'active' : 'disabled']",
+    @click="toggleClass") Toggle my Class`,
+    option1: `:class="[isActive ? 'active' : 'disabled']`,
+    option2: `:class="checkIfActive"`,
+    option2computed: `checkIfActive(){ return this.isActive ? "active" : "disabled"; }`,
   }),
   methods: {
     toggleClass() {
