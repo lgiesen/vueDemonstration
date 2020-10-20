@@ -1,49 +1,46 @@
 <template lang="pug">
-    v-container
-      v-row
-        v-col(align="center")
-          h1
-            | Vuex - State Management
-      v-row(cols="12")
-        v-spacer
-        v-col(cols="6")
-          //- v-pre disables vues interpretation of code (here: curly brackets) for that block
-          v-card.box 
-            v-card-title Referencing Vuex Store
-            v-card-text In store.js: state: {no: 11}. 
-              | This is referenced in State_Management.vue (this view)
-              | within
-              br
-              | computed: {
-              br
-              |  viewComputed () { return this.$store.state.clickAmount },
-              br
-              | }
-              br
-              | viewComputed can be referenced in the html template of the view
-              | with double curly brackets: 
-              span(v-pre) {{ viewComputed }}
-        v-spacer
-        v-col(cols="6")
-          v-card.box
-            v-card-title mapGetters
-            v-card-text
-              p getRequestCount: {{getRequestCount}} 
-              p getValidRequests: {{getValidRequests}}
-              v-text-field(v-model.number="id")
-              p getRequestById: {{getRequestById(id)}}
-        v-spacer
-      v-row
-        v-spacer
-        v-col(cols=6)
-          v-card.box 
-            p clickAmount: {{ clickAmount }}
-            v-btn(@click="incrementVarDelayed") delayed increment
-            v-btn(@click="incVar") direct increment
-        v-spacer
-        v-col(cols=6)
-          v-card.box
-        v-spacer
+  v-container
+    h3.text-center.display-2.font-weight-bold.mb-10 Vuex - State Management
+    v-row(cols="12")
+      v-spacer
+      v-col(cols="6")
+        //- v-pre disables vues interpretation of code (here: curly brackets) for that block
+        v-card.box 
+          v-card-title Referencing Vuex Store
+          v-card-text In store.js: state: {no: 11}. 
+            | This is referenced in State_Management.vue (this view)
+            | within
+            br
+            | computed: {
+            br
+            |  viewComputed () { return this.$store.state.clickAmount },
+            br
+            | }
+            br
+            | viewComputed can be referenced in the html template of the view
+            | with double curly brackets: 
+            span(v-pre) {{ viewComputed }}
+      v-spacer
+      v-col(cols="6")
+        v-card.box
+          v-card-title mapGetters
+          v-card-text
+            p getRequestCount: {{getRequestCount}} 
+            p getValidRequests: {{getValidRequests}}
+            v-text-field(v-model.number="id")
+            p getRequestById: {{getRequestById(id)}}
+      v-spacer
+    v-row
+      v-spacer
+      v-col(cols=6)
+        v-card.box 
+          p clickAmount: {{ clickAmount }}
+          v-btn(@click="incrementVarDelayed") delayed increment
+          v-btn(@click="incVar") direct increment
+      v-spacer
+      v-col(cols=6)
+        v-card.box
+      v-spacer
 </template>
 
 <script>

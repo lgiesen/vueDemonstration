@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container.basics
-  h1.text-center Basics of Vue.js
+  h3.text-center.display-2.font-weight-bold.mb-10 Basics of Vue.js
   BasicsTopics.d-flex.flex-wrap.justify-space-around
     AppInstance
     TemplateSyntax

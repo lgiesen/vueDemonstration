@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    h3.mt-5.mb-6 What is our situation and what do we need?
+    h3.mt-10.mb-6 What is our situation and what do we need?
     p Goal: Web-based simulation platform for public administrations = complex &rarr; manage logic and files 
       br
       | &rarr; front-end framework or library offer scaffold for front-end appolications

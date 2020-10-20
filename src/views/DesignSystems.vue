@@ -1,8 +1,8 @@
 <template lang="pug">
-  div.designsystems
+  div
     v-container.text-center
-      h1 Design Systems
-      h2 Design Languages
+      h3.text-center.display-2.font-weight-bold.mb-10 Design Systems
+      h1 Design Languages
       p There are various design languages, for instance Lighting Design System 
         | by Salesforce, Polaris by Shopify, Living Language by IBM and many more.
         | Hence, only the two most influential ones will be presented (Design Languages
@@ -44,7 +44,7 @@
         | content or digital pages of books. Sixth, user control is provided by guiding the
         | user, who ultimately decides (Human Interface Guidelines - Design - Apple Developer,
         | n.d.; Themes - IOS - Human Interface Guidelines - Apple Developer, n.d.).
-      h2 Design Principles and Theory
+      h1 Design Principles and Theory
       p Standardization of terminology (for use cases) facilitate development and reduce the
         | frequency and extent of impact of misunderstandings (Tena et al., 2013). This idea
         | for example takes on shape in the predefined methods, e.g. the functionality of
