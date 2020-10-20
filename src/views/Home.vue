@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    h1.text-center.display-2.font-weight-bold.mb-10 Dissociation of Front-End Frameworks
+    h1.text-center.display-2.mb-10 Dissociation of Front-End Frameworks
     v-card
       v-tabs(v-model="tab") 
         v-tab(v-for="item in items"

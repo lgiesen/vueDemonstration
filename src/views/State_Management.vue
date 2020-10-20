@@ -2,8 +2,7 @@
     v-container
       v-row
         v-col(align="center")
-          h1
-            | Vuex - State Management
+          h1.text-center.display-2.mb-10 Vuex - State Management
       v-row(cols="12")
         v-spacer
         v-col(cols="6")

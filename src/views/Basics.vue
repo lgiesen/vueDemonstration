@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container.basics
-  h1.text-center Basics of Vue.js
+  h1.text-center.display-2.mb-10 Basics of Vue.js
   BasicsTopics.d-flex.flex-wrap.justify-space-around
     AppInstance
     TemplateSyntax
@@ -11,7 +11,6 @@ v-container.basics
     EventHandling
     UserInput
     ComponentSystem
-    PreviewStateManagement
 </template>
 <script>
 import AppInstance from "@/components/BasicsTopics/AppInstance.vue";
@@ -23,7 +22,6 @@ import ListRendering from "@/components/BasicsTopics/ListRendering.vue";
 import EventHandling from "@/components/BasicsTopics/EventHandling.vue";
 import UserInput from "@/components/BasicsTopics/UserInput.vue";
 import ComponentSystem from "@/components/BasicsTopics/ComponentSystem.vue";
-import PreviewStateManagement from "@/components/BasicsTopics/PreviewStateManagement.vue";
 
 export default {
   name: "Basics",
@@ -36,8 +34,7 @@ export default {
     ListRendering,
     EventHandling,
     UserInput,
-    ComponentSystem,
-    PreviewStateManagement
+    ComponentSystem
   },
 };
 </script>

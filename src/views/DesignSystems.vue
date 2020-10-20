@@ -1,7 +1,7 @@
 <template lang="pug">
   div.designsystems
     v-container.text-center
-      h1 Design Systems
+      h1.text-center.display-2.mb-10 Design Systems
       h2 Design Languages
       p There are various design languages, for instance Lighting Design System 
         | by Salesforce, Polaris by Shopify, Living Language by IBM and many more.
