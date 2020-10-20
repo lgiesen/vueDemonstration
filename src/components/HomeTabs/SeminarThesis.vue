@@ -2,7 +2,7 @@
 <template lang="pug">
     v-container.SeminarThesis
         div.pa-2.mt-10(v-for="paragraph in paragraphs")
-            h2.headline.font-weight-bold.mb-3 {{ paragraph.header }}
+            h3.mb-3 {{ paragraph.header }}
             p {{ paragraph.content }}
         h2 What Tools Could be Used?
         //- v-img(
