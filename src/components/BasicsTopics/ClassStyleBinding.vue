@@ -26,8 +26,6 @@
         br
         | Second one is:
         highlightjs(language="javascript" :code="option2") 
-        | in combination with the computed property:
-        highlightjs(language="javascript" :code="option2computed") 
 </template>
 
 <script>
@@ -38,8 +36,12 @@ export default {
     toggleClassText: `v-btn(:class="[isActive ? 'active' : 'disabled']", \n@click="toggleClass") Toggle my Class`,
     css: `.active { background-color: lightgreen; color: green; } \n.disabled { background-color: grey; color: black; }`,
     option1: `:class="[isActive ? 'active' : 'disabled']`,
-    option2: `:class="checkIfActive"`,
-    option2computed: `checkIfActive(){ return this.isActive ? "active" : "disabled"; }`,
+    option2: 
+`:class="checkIfActive"
+...
+export default { computed: {
+  checkIfActive () { return this.isActive ? "active" : "disabled"; }
+} }`,
   }),
   methods: {
     toggleClass() {
