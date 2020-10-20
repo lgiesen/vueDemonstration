@@ -1,11 +1,8 @@
 <template lang="pug">
-  card#nav
-    v-app-bar(absolute dense)
-      //- props can be used to customize the v-img properties
-      template(v-slot:img="{ props }")
-        v-img(v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)")
-      template(v-slot:extension)
+  card#nav.mb-10
+    v-app-bar(absolute)
+      template
+        GoBack
         v-tabs(align-with-title)
           v-tab(to="/") Home
           <!-- use all the items from the navItems.json with corresponding links -->
@@ -17,8 +14,12 @@
 <script>
 //import the items for the navbar
 import navItems from "./navItems.json";
+import GoBack from "@/components/GoBack"
 export default {
   name: "TheNavigation",
+  components: {
+    GoBack
+  },
   data() {
     return {
       views: navItems,
