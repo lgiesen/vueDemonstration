@@ -1,7 +1,7 @@
 <template lang="pug">
   div.about
     v-container
-      h1.text-center Why Vue.js?
+      h1.text-center References
       img(alt="Vue logo" src="../assets/logo.png")
       p Presentations today to put the puzzle pieces together:
       h2 Monolithic or Microsoervice Architecture

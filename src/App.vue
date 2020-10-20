@@ -4,7 +4,7 @@
     TheNavigation
     router-view
     <!-- use the component TheFooter by using the corresponding tag -->
-    TheFooter
+    TheFooter 
 </template>
 
 <script>
