@@ -38,8 +38,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  .block{
-    width: 100vw;
-    height: 5rem;
-  }
 </style>

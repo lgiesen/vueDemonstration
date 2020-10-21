@@ -28,6 +28,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+.block{
+  width: 100vw;
+  height: 5rem;
+}
 /* lioshi */
 /* .hljs-comment{color:#8d8d8d !important}.hljs-quote{color:#b3c7d8 !important}.hljs-deletion,.hljs-name,.hljs-regexp,.hljs-selector-class,.hljs-selector-id,.hljs-tag,.hljs-template-variable,.hljs-variable{color:#c66 !important}.hljs-built_in,.hljs-builtin-name,.hljs-literal,.hljs-number,.hljs-subst .hljs-link,.hljs-type{color:#de935f !important}.hljs-attribute{color:#f0c674 !important}.hljs-addition,.hljs-bullet,.hljs-params,.hljs-string{color:#b5bd68 !important}.hljs-meta,.hljs-section,.hljs-title{color:#81a2be !important}.hljs-class,.hljs-function,.hljs-keyword,.hljs-selector-tag{color:#be94bb !important}.hljs-symbol{color:#dbc4d9 !important}.hljs{display:block !important;overflow-x:auto !important;background:#303030 !important;color:#c5c8c6 !important;padding:.5em !important}.hljs-emphasis{font-style:italic !important}.hljs-strong{font-weight:700 !important} */
 /* night-owl */

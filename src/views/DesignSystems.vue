@@ -2,6 +2,26 @@
   div.designsystems
     v-container
       h1.text-center.display-2.mb-10 Front-End Design Systems
+      v-row
+        v-col
+          h3 Google Material Design Guidelines
+          ul Principles
+            li Layout: predictable, consistent, responsive
+            li Sound: informative, honest, reassuring
+            li Motion: informative, focused, expressive
+            li Gestures: alternative interaction, easy to use, tactile control
+          br
+          ul
+            li Imitate real life physics &rarr; shadow
+          v-icon mdi-vuetify
+          span Vuetify (Material Component Framework)
+        
+        v-col
+          h3 Apple Design Guidelines
+          ul 
+            li Guidelines: clarity, deference, depth 
+            li Principles: aesthetic integrity, consistency, direct manipulation, feedback, metaphors, user control
+            li Not detailed &rarr; application in project unclear 
       v-row 
         v-col 
           h3 Material Design

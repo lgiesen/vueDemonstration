@@ -1,10 +1,20 @@
 <template lang="pug">
   v-container
     v-row
-      v-col(align="center")
+      v-col
         h1.text-center.display-2.mb-10 Vuex - State Management
-        h4 
-          a(href="https://scrimba.com/scrim/cMPa2Uk?pl=pnyzgAP") Learn with Tutorial
+        v-row
+          v-col
+            img(src="@/assets/images/passInfo.png")
+            p &rarr; Overly complicated
+            ul
+              li Complexity: global ”single source of truth” &rarr; maintainability
+          v-col
+            img(src="@/assets/images/vuex_table.png")
+    div.block
+    div.block
+    h4.text-center 
+      a(href="https://scrimba.com/scrim/cMPa2Uk?pl=pnyzgAP") Learn with Tutorial
     v-row(cols="12")
       v-spacer
       v-col(cols="6")
@@ -92,5 +102,8 @@ export default {
 .box {
   height: 40vh;
   padding: 0.75em 1em;
+}
+img {
+  width: 40vw;
 }
 </style>
