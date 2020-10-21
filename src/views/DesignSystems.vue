@@ -15,13 +15,28 @@
             li Imitate real life physics &rarr; shadow
           v-icon mdi-vuetify
           span Vuetify (Material Component Framework)
-        
+          br 
+          br
+          p &rarr; Material Design with Vuetify
         v-col
           h3 Apple Design Guidelines
           ul 
             li Guidelines: clarity, deference, depth 
-            li Principles: aesthetic integrity, consistency, direct manipulation, feedback, metaphors, user control
+            li Principles:
+              ul  
+                li aesthetic 
+                li integrity
+                li consistency
+                li direct manipulation
+                li feedback
+                li metaphors
+                li user control
             li Not detailed &rarr; application in project unclear 
+
+      div.block
+      div.block
+      div.block
+      div.block
       v-row 
         v-col 
           h3 Material Design

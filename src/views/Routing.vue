@@ -1,13 +1,15 @@
 <template lang="pug">
   v-container
-    h1.text-center.display-2.mb-10 Router
-    p Switch between views (=site)
-    img(src="@/assets/images/router.png")
-    p In practice:
-    ul
-      li Dynamic: externalize navigation links
-      li mode: “history” &rarr; resolve …/#/ in URL + history stack
-      li webpackChunkName
+    div
+      h1.text-center.display-2.mb-10 Router
+      ul
+        li Switch between views (=site)
+      img(src="@/assets/images/router.png")
+      p In practice:
+      ul
+        li Dynamic: externalize navigation links
+        li mode: “history” &rarr; resolve …/#/ in URL + history stack
+        li webpackChunkName
     div.block
     div.block
     div.block

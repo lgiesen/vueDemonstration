@@ -53,7 +53,7 @@
           v-btn(@click="incVar") direct increment
       v-spacer
       v-col(cols=6)
-        v-card.box
+        //- v-card.box
       v-spacer
 </template>
 
