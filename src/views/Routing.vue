@@ -1,22 +1,22 @@
 <template lang="pug">
-  div
-    v-container
-      h1.text-center.display-2.mb-10 Router
-      p {{ text1 }}
-        code.hljs.d-inline router-link(to="/") Home
-        | {{ text2}}
-        highlightjs(language="javascript" :code="nav")
-        | {{ routerFile }}
-        highlightjs(language="javascript" :code="routerLogic")
-        | {{ webpackChunkName }}
-        br
-        | {{ webpackChunkName2 }}
-        br
-        | {{ webpackChunkName3 }}
-        code.hljs.d-inline mode: "history"
-        | {{ historyMode }}
-        code.hljs.d-inline goBack() { return this.$router.go(-1); }
-        |  (Creating a Go-Back Button - A Vue.Js Lesson From Our Vue.Js..., n.d.)
+  v-container
+    h1.text-center.display-2.mb-10 Router
+    img(src="@/assets/images/router.png")
+    p {{ text1 }}
+      code.hljs.d-inline router-link(to="/") Home
+      | {{ text2}}
+      highlightjs(language="javascript" :code="nav")
+      | {{ routerFile }}
+      highlightjs(language="javascript" :code="routerLogic")
+      | {{ webpackChunkName }}
+      br
+      | {{ webpackChunkName2 }}
+      br
+      | {{ webpackChunkName3 }}
+      code.hljs.d-inline mode: "history"
+      | {{ historyMode }}
+      code.hljs.d-inline goBack() { return this.$router.go(-1); }
+      |  (Creating a Go-Back Button - A Vue.Js Lesson From Our Vue.Js..., n.d.)
 </template>
 <script>
 export default {
