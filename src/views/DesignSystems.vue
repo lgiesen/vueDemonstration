@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    v-container.text-center
+    v-container
       h3.text-center.display-2.font-weight-bold.mb-10 Design Systems
       h1 Design Languages
       p There are various design languages, for instance Lighting Design System 
