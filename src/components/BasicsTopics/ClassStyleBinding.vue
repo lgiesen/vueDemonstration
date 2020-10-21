@@ -3,29 +3,36 @@
     v-card-title
       h2 Class and Style Binding
     v-card-text
-      v-btn(
+      v-btn.mb-4.mt-4(
         :class="[isActive ? 'active' : 'disabled']",
         @click="toggleClass"
-      ) Toggle my class
-      p
-        v-pre You can pass arguments to the v-bind directive so that
-          | you can add classes based on boolean expressions.
-          | The code used for the button is:
-          | v-btn(:class="{active: isActive, disabled:
-          | !isActive}" @click="toggleClass") Toggle my class
-          | active and disabled are classes, which are applied based on the data isActive
-          | By pressing the button, you toggle the value of isActive
-          | and therefore add disabled and remove active or the other way around.
-          br 
-          br
-          | Luckily, there are more beautiful ways of implementation:
-          br 
-          | First one is:
-          | :class="[isActive ? 'active' : 'disabled']
-          br
-          | Second one is:
-          | :class="checkIfActive" in combination with the computed property:
-          | checkIfActive(){ return this.isActive ? "active" : "disabled"; }
+      ) Toggle my Class to change my color
+      p Special reactive actions to modify the DOM are enabled by directives, which use a 
+        | ‘v-‘-prefix. By appending a colon, you can pass an argument. For instance, 
+        code.hljs.d-inline v-bind
+        | connects a DOM element with data or computed properties. Here the image source 
+        | link is bound to the value of ‘url’  
+        code.hljs.d-inline img(v-bind:src=”url”)
+        | . The shorthand for v-bind leaves out the directives name: 
+        code.hljs.d-inline img(:src=”url”)
+        | .
+        br
+        | Similarly, you can bind other properties like classes as strings and make use of 
+        code.hljs.d-inline :class="{active: isActive, disabled: !isActive}"
+        | , 
+        code.hljs.d-inline :class="[isActive ? 'active' : 'disabled']"
+        |  or 
+        code.hljs.d-inline :class="checkIfActive"
+        | , where checkIfActive a method or a computed property is (Class and Style Bindings — Vue.Js, n.d.).
+        
+        | various bracket logic:
+        highlightjs(language="javascript" :code="toggleClassText") Toggle my Class
+        | active and disabled are classes, which are applied based on isActive
+        | By pressing the button, you toggle the value of isActive
+        | and therefore add disabled and remove active or the other way around.
+        br
+        | Another option out of the various ways of implementation is:
+        highlightjs(language="javascript" :code="option2") 
 </template>
 
 <script>
@@ -33,7 +40,14 @@ export default {
   name: "ClassStyleBinding",
   data: () => ({
     isActive: true,
-    // name: "Default Name",
+    toggleClassText: `v-btn(:class="[isActive ? 'active' : 'disabled']", \n@click="toggleClass") Toggle my Class`,
+    option1: `:class="[isActive ? 'active' : 'disabled']`,
+    option2: 
+`:class="checkIfActive"
+...
+export default { computed: {
+  checkIfActive () { return this.isActive ? "active" : "disabled"; }
+} }`,
   }),
   methods: {
     toggleClass() {

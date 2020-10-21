@@ -7,7 +7,7 @@
           v-tab(to="/") Home
           <!-- use all the items from the navItems.json with corresponding links -->
           v-tab(v-for="view in views" 
-            :key="view.name" 
+            :key="view.to.name" 
             :to="view.to").links {{ view.tag }}
 </template>
 

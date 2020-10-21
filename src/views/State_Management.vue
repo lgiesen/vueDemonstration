@@ -1,6 +1,10 @@
 <template lang="pug">
   v-container
-    h3.text-center.display-2.font-weight-bold.mb-10 Vuex - State Management
+    v-row
+      v-col(align="center")
+        h1.text-center.display-2.mb-10 Vuex - State Management
+        h4 
+          a(href="https://scrimba.com/scrim/cMPa2Uk?pl=pnyzgAP") Learn with Tutorial
     v-row(cols="12")
       v-spacer
       v-col(cols="6")
