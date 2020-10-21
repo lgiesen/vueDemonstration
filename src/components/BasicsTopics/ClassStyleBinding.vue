@@ -21,7 +21,7 @@
         code.hljs.d-inline :class="{active: isActive, disabled: !isActive}"
         | , 
         code.hljs.d-inline :class="[isActive ? 'active' : 'disabled']"
-        | or
+        |  or 
         code.hljs.d-inline :class="checkIfActive"
         | , where checkIfActive a method or a computed property is (Class and Style Bindings — Vue.Js, n.d.).
         

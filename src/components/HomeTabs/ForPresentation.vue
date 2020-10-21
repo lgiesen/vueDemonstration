@@ -1,11 +1,12 @@
 <template lang="pug">
   v-container
     h3.mt-5.mb-6 What is our situation and what do we need?
-    p Goal: Web-based simulation platform for public administrations = complex &rarr; manage logic and files 
-      br
-      | &rarr; front-end framework or library offer scaffold for front-end appolications
-      | with structure ("separation of concerns") &rarr; clarity, transparency and maintainability
-    h3.mt-10.mb-6 Which front-end framework or libary suits our project?
+    ul
+      li Goal: web-based simulation platform for public administrations 
+      li = complex &rarr; organize clutter + manage logic and files 
+      li &rarr; front-end framework or library offer scaffold for front-end applications with structure 
+      li "separation of concerns" &rarr; clarity, transparency and maintainability
+    h3.mt-10.mb-6 Which front-end framework or library suits our project?
     v-flex.text-xs-center
       //- v-col(
       //-   v-for="elem in FrameworksLibraries"
@@ -52,7 +53,7 @@
             td Basic: Routing, State Management, ... 
           tr
             td Complexity
-            td High: Many functionalities to comprehend
+            td High: "Too" many functionalities
             td High: A lot of decision-making
             td Low: Easy and fast to learn
     

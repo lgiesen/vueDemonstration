@@ -9,10 +9,14 @@
         | {{ routerFile }}
         highlightjs(language="javascript" :code="routerLogic")
         | {{ webpackChunkName }}
+        br
+        | {{ webpackChunkName2 }}
+        br
+        | {{ webpackChunkName3 }}
         code.hljs.d-inline mode: "history"
         | {{ historyMode }}
         code.hljs.d-inline goBack() { return this.$router.go(-1); }
-        | (Creating a Go-Back Button - A Vue.Js Lesson From Our Vue.Js..., n.d.)
+        |  (Creating a Go-Back Button - A Vue.Js Lesson From Our Vue.Js..., n.d.)
 </template>
 <script>
 export default {
@@ -43,13 +47,15 @@ const routes = [{ path: "/", name: "Home", component: Home, },
     The other components use lazy loading to drastically improve performance: 
     In contrast to the main view, they are dynamically imported once their use is requested. 
     This route level code-splitting separates the JS into chunk files (cf. Vue-Devtools under 
-    Network, JS), which can be named with the webpackChunkName comment. \n
+    Network, JS), which can be named with the webpackChunkName comment.`,
+    webpackChunkName2: `
     For a 404 page, the path would use the wildcard “*” to match all possible file paths and is 
     listed at the end of the routes so that the router does not match the 404 page unintentionally 
-    (How to Create a 404 Not Found Route and Page with Vue Router - A..., n.d.). \n
+    (How to Create a 404 Not Found Route and Page with Vue Router - A..., n.d.).`,
+    webpackChunkName3: `
     The default router mode is hash-mode, which uses a URL hash to reflect the URL so that a 
     complete page reload is avoided. Switching to history-mode by adding `,
-    historyMode: `to the export of VueRouter resolves the hashtag (“…/#/”) in the URL path and 
+    historyMode: ` port of VueRouter resolves the hashtag (“…/#/”) in the URL path and 
     still avoids page reload because of the history.pushState API (How to Pass Vue Router Params 
     as Props to Components - A Vue.Js..., n.d.). In history mode it is simple to go to the previous 
     page, because of the history stack: `
