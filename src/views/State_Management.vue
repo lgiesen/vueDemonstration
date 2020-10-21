@@ -6,6 +6,8 @@
         v-row
           v-col
             img(src="@/assets/images/passInfo.png")
+            p Quelle: 
+              a(href="https://www.vuemastery.com/courses/mastering-vuex/intro-to-vuex/") (Intro to Vuex - Mastering Vuex | Vue Mastery, n.d.)
             p &rarr; Overly complicated
             ul
               li Complexity: global ”single source of truth” &rarr; maintainability
