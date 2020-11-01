@@ -3,26 +3,31 @@
         v-card-title
             h2 List Rendering
         v-card-text
-            p Iteration through lists is performed by 
-                code.hljs.d-inline v-for
-                |  and can be displayed in the DOM. For example one can use range: 
+            p Additionally, iteration through lists is performed by 
+                | v-for and can be displayed in the DOM. For example 
+                | one can use ranges: 
                 highlightjs(language="javascript" :code="vfor") 
-                | Binding the id as a key to the item is a common practice, 
-                | which is the case in this for-each loop:
-                highlightjs(language="javascript" :code="foreach") 
+                | It is worth noting that binding the id as a key to the 
+                | item is a common practice: 
+                highlightjs(language="javascript" :code="keybinding") 
+                | Additionally, well-known functions to alter lists can be used, 
+                | for instance, push, pop, splice, sort, reverse, filter and concat (Vue, n.d.-a).
 </template>
 
 <script>
 export default {
   name: "ListRendering",
   data: () => ({
-      vfor: `v-for="n in 10">{{ n }}`,
-      foreach: 
-`ol
-    li(v-for="(item, index) in list" :key="item.id") 
-...
-export default {
-    data() { return { list: [‘a’, ‘b’, ‘c’] } }
+      vfor: `div(v-for="n in 10") {{ n }}`,
+      keybinding: 
+`data() { 
+    return { 
+        list: [
+            { id: 1, name: "a" }, 
+            {id: 2, name: "b" }, 
+            { id: 3, name: "c" }
+        ] 
+    }
 }`,
   })
 };

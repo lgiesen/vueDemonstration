@@ -14,7 +14,6 @@
           v-col
             img(src="@/assets/images/vuex_table.png")
     div.block
-    div.block
     h4.text-center 
       a(href="https://scrimba.com/scrim/cMPa2Uk?pl=pnyzgAP") Learn with Tutorial
     v-row(cols="12")
@@ -54,8 +53,31 @@
           v-btn(@click="incrementVarDelayed") delayed increment
           v-btn(@click="incVar") direct increment
       v-spacer
-      v-col(cols=6)
-        //- v-card.box
+    v-row.mt-10
+      p On the one hand, small applications pass down properties and emit 
+        | events up between different levels of components, which is 
+        | manageable for simple websites. On the other hand, complex applications 
+        | require organization to ensure maintainability, which is achieved by the 
+        | state management library Vuex. 
+        br
+        | It provides a centralized and reactive storage container for globally 
+        | accessible states. Additionally, getters are similar to computed properties 
+        | but offer higher efficiency when used multiple times. Moreover, actions 
+        | mirror the locally used methods, but they may contain asynchronous elements, 
+        | which is suitable for API calls. Mutations commit and keep track of state 
+        | change to make it understandable and manageable. Synchronization is mandatory 
+        | because multiple changes could affect one state at the same time leading to 
+        | race conditions. Hence, it is advisable that actions receive an API response, 
+        | process it and forward the information to mutations. Concluding, Vuex is similar 
+        | to the local instance with additional adaptations for global use and state change.
+        br
+        | Store variables may be accessed by using this.$store and specifying the path, 
+        | e.g. this.$store.state.storeVariable to use the state storeVariable. Moreover, 
+        | map helpers can be used to simplify the creation of computed properties and 
+        | methods in the local instance (cf. Appendix, 2.11 State Management). As an 
+        | overview, Vuex helps to access state from any component and to manage and 
+        | keep track of state change (VueMastery, n.d.).
+
       v-spacer
 </template>
 
