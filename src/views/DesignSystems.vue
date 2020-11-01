@@ -110,7 +110,6 @@
             | real-life concepts, for instance, toggle switches, drag and drop content or digital 
             | pages of books. Sixth, user control is provided by guiding the user, who ultimately 
             | decides (Apple, n.d.-b, n.d.-a).
-
       h2 Design Principles and Theory
       p There are various types of principles. Hence, an exemplary principle is presented.
         | Standardization of terminology (for use cases) facilitates the development and reduces 

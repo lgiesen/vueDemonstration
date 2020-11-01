@@ -31,12 +31,12 @@ script:
 // importing the navigation and the footer
 import TheNavigation from "@/components/TheNavigation/TheNavigation.vue";
 import TheFooter from "@/components/TheFooter.vue";
-export default &#123;
-  components: &#123;
+export default {
+  components: {
     TheNavigation,
     TheFooter
-  &#125;,
-&#125;;
+  },
+};
 `,
   })
 };

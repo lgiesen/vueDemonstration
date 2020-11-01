@@ -1,7 +1,7 @@
 <template lang="pug">
     v-card
         v-card-title
-            h2 Form Input Bindings / User Input / Two-way data binding
+            h2 Two-way data binding
         v-card-text
             p {{ text }}
                 highlightjs(language="javascript" :code="userInput") 

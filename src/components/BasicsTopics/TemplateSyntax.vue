@@ -4,7 +4,7 @@
             h2 Template Syntax
         v-card-text
             p {{ text }}
-            highlightjs(language="javascript" :code="moustacheSyntax")
+              highlightjs(language="javascript" :code="moustacheSyntax")
             p (Vue, n.d.-b)
 </template>
  
